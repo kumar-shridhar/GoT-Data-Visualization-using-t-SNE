@@ -37,14 +37,11 @@ class_labels = np.unique(y)
 label_encoder = LabelEncoder()
 y = label_encoder.fit_transform(y)
 
-# step 5: split the data into training set and test set
-test_percentage = 0.1
-x_train, x_test, y_train, y_test = train_test_split(x_std, y, test_size = test_percentage, random_state = 0)
 
 # t-distributed Stochastic Neighbor Embedding (t-SNE) visualization
 from sklearn.manifold import TSNE
 tsne = TSNE(n_components=2, random_state=0)
-x_test_2d = tsne.fit_transform(x_test)
+x_std_2d = tsne.fit_transform(x_std)
 
 #define markers and colors depending on the number of classes (in this case 21 classes equal to houses in GoT)
 markers=(',','o','v','^','<','>','1','2','3','4','s','p','*','h','H','+','x','D','d','|','_')
@@ -54,8 +51,8 @@ color_map = {0:'red', 1:'blue', 2:'lightgreen', 3:'purple', 4:'cyan', 5:'yellow'
 
 #plot the data
 plt.figure()
-for idx, cl in enumerate(np.unique(y_test)):
-    plt.scatter(x=x_test_2d[y_test==cl,0], y=x_test_2d[y_test==cl,1], c=color_map[idx], marker=markers[idx], label=cl)
+for idx, cl in enumerate(np.unique(y)):
+    plt.scatter(x=x_std_2d[y==cl,0], y=x_std_2d[y==cl,1], c=color_map[idx], marker=markers[idx], label=cl)
 plt.xlabel('X in t-SNE')
 plt.ylabel('Y in t-SNE')
 plt.legend(loc='upper left')
