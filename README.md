@@ -9,18 +9,20 @@ Dataset downloaded from Kaggle: https://www.kaggle.com/mylesoneill/game-of-thron
 
 BATTLES
 
+
 1.Run the python file:
 
 	t-SNE_battles.py
 
 
-2. Class labels used here are:
+2.Class labels used here are:
 
 ['Beyond the Wall' 'The Crownlands' 'The North' 'The Reach'
  'The Riverlands' 'The Stormlands' 'The Westerlands']
 
 
 We can visualize the data as in which year battles in what region took place. The regions are used as labels here.
+
 
 
 
