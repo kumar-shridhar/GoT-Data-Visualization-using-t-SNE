@@ -4,11 +4,13 @@ Visualize multidimensional Game of Thrones data-set using t-SNE.
 1. Dataset downloaded from Kaggle: https://www.kaggle.com/mylesoneill/game-of-thrones
 
 2. Run the python file:
+
         t-SNE_GoT.py
 
 
 
- 3.Print the label meaning by printing the class_labels as:
+3.Print the label meaning by printing the class_labels as:
+ 	
  	print class_labels
 
 In this case the 21 labels are:
