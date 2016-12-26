@@ -6,8 +6,9 @@ from sklearn.cross_validation import train_test_split
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 
-# step 1: download the data
-dataframe_all = pd.read_csv("./game-of-thrones/character-predictions.csv")
+# step 1: download the data and give it's path
+#Go to the Kaggle page and download the dataset (https://www.kaggle.com/mylesoneill/game-of-thrones)
+dataframe_all = pd.read_csv("./game-of-thrones/battles.csv")
 num_rows = dataframe_all.shape[0]
 
 # step 2: remove useless data
@@ -19,10 +20,9 @@ counter_without_nan = counter_nan[counter_nan==0]
 dataframe_all = dataframe_all[counter_without_nan.keys()]
 
 all_val=dataframe_all
-columns = dataframe_all.columns
 
 # remove unnecessary data
-dataframe_all = dataframe_all.drop(dataframe_all.columns[[0,1,2,5,7,8,9,10,11,17,18]],axis=1)
+dataframe_all = dataframe_all.drop(dataframe_all.columns[[0,3,4]],axis=1)
 
 # step 3: get features (x) and scale the features
 # get x and convert it to numpy array
@@ -30,9 +30,10 @@ x = dataframe_all.ix[:,:-1].values
 standard_scaler = StandardScaler()
 x_std = standard_scaler.fit_transform(x)
 
+
 # step 4: get class labels y and then encode it into number 
 # get class label data
-y = all_val['isAlive']
+y = all_val['region']
 # encode the class label
 class_labels = np.unique(y)
 label_encoder = LabelEncoder()
@@ -43,9 +44,9 @@ from sklearn.manifold import TSNE
 tsne = TSNE(n_components=2, random_state=0)
 x_std_2d = tsne.fit_transform(x_std)
 
-#define markers and colors depending on the number of classes (in this case 2 classes: Dead or Alive)
-markers=(',','o')
-color_map = {0:'red', 1:'blue'}
+#define markers and colors depending on the number of classes (in this case 7 classes equal to battle regions in GoT)
+markers=(',','o','v','^','<','>','1')
+color_map = {0:'red', 1:'blue', 2:'lightgreen', 3:'purple', 4:'cyan', 5:'yellow', 6:'orange'}
 
 #plot the data
 plt.figure()
