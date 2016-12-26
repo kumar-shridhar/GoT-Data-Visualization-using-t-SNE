@@ -1,15 +1,22 @@
 # GoT-Data-Visualization-using-t-SNE
 Visualize multidimensional Game of Thrones data-set using t-SNE.
 
-1.Dataset downloaded from Kaggle: https://www.kaggle.com/mylesoneill/game-of-thrones
 
-2.Run the python file:
+DATASET
 
-	t-SNE_GoT.py
-
+Dataset downloaded from Kaggle: https://www.kaggle.com/mylesoneill/game-of-thrones
 
 
-3.Print the label meaning by printing the class_labels as:
+
+CHARACTER DEATH
+
+1.Run the python file:
+
+	t-SNE_charDeath.py
+
+
+
+2.Print the label meaning by printing the class_labels as:
  	
  	print class_labels
 
@@ -22,3 +29,20 @@ In this case the 21 labels are:
 
 
  We can visualize how members of one House is close to members of other Houses based on the how close they lie to each other. We can visualize in the left big cluster that some 'Martells' are close to each other while one 'Martell' is closer to 'Stark'. Also, some 'Night's Watch' are grouped together. 
+
+
+
+
+
+ CHARACTER PREDICTION
+
+
+1.Run the python file:
+
+ 	t-SNE_charPred.py
+
+
+2.The characters are visualized as whether alive or dead with 0 as dead (in Red) and 1 as alive (in Blue).
+
+
+We can visualize some dead and alive characters together. We cannot say for sure that the alive characters near to dead characters will be dead soon, but we can say for sure that those alive characters have similarity with dead characters like they might be popular and noble. E.g: Robb Stark and Sansa Stark.
