@@ -45,9 +45,7 @@ x_std_2d = tsne.fit_transform(x_std)
 
 #define markers and colors depending on the number of classes (in this case 21 classes equal to houses in GoT)
 markers=(',','o','v','^','<','>','1','2','3','4','s','p','*','h','H','+','x','D','d','|','_')
-color_map = {0:'red', 1:'blue', 2:'lightgreen', 3:'purple', 4:'cyan', 5:'yellow', 6:'orange', 7:'green', 8:'black', 
-            9:'blue',10:'blue',11:'blue',12:'blue',13:'blue',14:'blue',15:'blue',16:'blue',17:'blue',18:'blue',19:'blue',20:'blue',
-            21:'blue'}
+color_map = {0:'red', 1:'blue', 2:'green', 3:'magenta', 4:'cyan', 5:'yellow', 6:'black', 7:'red', 8:'blue', 9:'green', 10:'magenta', 11:'cyan', 12:'yellow', 13:'black',14:'red', 15:'blue', 16:'green', 17:'magenta', 18:'cyan', 19:'yellow', 20:'black'}
 
 #plot the data
 plt.figure()
