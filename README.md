@@ -5,11 +5,11 @@ Visualize multidimensional Game of Thrones data-set using t-SNE.
 
 2. Run the python file:
 
-    t-SNE_GoT.py
+	t-SNE_GoT.py
 
 
 
-3.Print the label meaning by printing the class_labels as:
+3. Print the label meaning by printing the class_labels as:
  	
  	print class_labels
 
