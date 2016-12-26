@@ -24,6 +24,10 @@ BATTLES
 We can visualize the data as in which year battles in what region took place. The regions are used as labels here.
 
 
+![alt tag](https://github.com/kumar-shridhar/GoT-Data-Visualization-using-t-SNE/blob/master/screenshot/battles.png)
+
+
+
 
 
 CHARACTER DEATH
@@ -48,6 +52,9 @@ In this case the 21 labels are:
 
 
  We can visualize how members of one House is close to members of other Houses based on the how close they lie to each other. We can visualize in the left big cluster that some 'Martells' are close to each other while one 'Martell' is closer to 'Stark'. Also, some 'Night's Watch' are grouped together. 
+ 
+ 
+ ![alt tag](https://github.com/kumar-shridhar/GoT-Data-Visualization-using-t-SNE/blob/master/screenshot/charDeath.png)
 
 
 
@@ -65,3 +72,6 @@ In this case the 21 labels are:
 
 
 We can visualize some dead and alive characters together. We cannot say for sure that the alive characters near to dead characters will be dead soon, but we can say for sure that those alive characters have similarity with dead characters like they might be popular and noble. E.g: Robb Stark and Sansa Stark.
+
+
+![alt tag](https://github.com/kumar-shridhar/GoT-Data-Visualization-using-t-SNE/blob/master/screenshot/charPred.png)
