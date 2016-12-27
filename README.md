@@ -2,12 +2,12 @@
 Visualize multidimensional Game of Thrones data-set using t-SNE.
 
 
-DATASET
+## DATASET
 
 Dataset downloaded from Kaggle: https://www.kaggle.com/mylesoneill/game-of-thrones
 
 
-BATTLES
+## BATTLES
 
 
 1.Run the python file:
@@ -30,7 +30,7 @@ We can visualize the data as in which year battles in what region took place. Th
 
 
 
-CHARACTER DEATH
+## CHARACTER DEATH
 
 
 1.Run the python file:
@@ -60,7 +60,7 @@ In this case the 21 labels are:
 
 
 
- CHARACTER PREDICTION
+## CHARACTER PREDICTION
 
 
 1.Run the python file:
